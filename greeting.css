@@ -1,0 +1,505 @@
+:root {
+  /*
+  --lightgreen: #e9edc9;
+  --pink: #edafb8;
+  --grey: #8b8c89;
+  --darkgreen: #6b705c;
+  */
+  --darkgreen: #fcfbf1;
+  --lightgreen: #ece6d3;
+  --pink: #264e36;
+  --grey: #221712;
+}
+ul {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0px;
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.container {
+  background-color: var(--lightgreen);
+  width: 100%;
+  height: 100%;
+}
+
+.header-hello {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  /*background-color: #ffeedd;*/
+  background-color: rgb(192, 191, 178, 0.4);
+  text-align: center;
+  border-width: 15px 0px 15px 0px;
+  border-color: var(--pink);
+  border-style: solid;
+}
+
+h1 {
+  font-size: 2.7rem;
+  color: #264e36;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #771011;
+}
+
+.input-name {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 3rem;
+}
+.input-field {
+  width: 60%;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.7rem;
+}
+
+.input-field:focus {
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6f635b;
+}
+.input-todo {
+  width: 60%;
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  color: var(--grey);
+}
+
+.input-todo:focus {
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  color: #6f635b;
+}
+
+input[type="text"]::placeholder {
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  color: #6f635b;
+}
+
+.btn-remember,
+.btn-add {
+  background-image: url("./pictures/tomato1.png");
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 20px;
+  background-color: #dedbd2;
+  transition: transform 0.1s ease;
+}
+.btn-remember {
+  position: absolute;
+  top: 17%;
+  right: 22%;
+  width: 80px;
+  height: 42px;
+}
+
+.btn-remember:hover,
+.btn-add:hover {
+  background-image: url("./pictures/tomato2.png");
+  cursor: pointer;
+  transform: translate(3px, 4px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.plan-container {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0px 100px;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+.calendar-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.header-plan {
+  margin-bottom: 3rem;
+}
+.calendar-heading {
+  margin: 0rem 0rem 2rem 0rem;
+  font-size: 1.8rem;
+}
+.pika-single {
+  display: flex;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  border: none !important;
+}
+.pika-lendar {
+  width: 500px !important;
+}
+.pika-label {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500 !important;
+  font-style: normal;
+  font-size: 1.6rem !important;
+  margin-bottom: 20px !important;
+  color: #221712;
+}
+.pika-table abbr {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500 !important;
+  font-style: normal;
+  font-size: 1rem !important;
+  color: #6f635b !important;
+}
+abbr[title] {
+  text-decoration: none !important;
+}
+.pika-button {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400 !important;
+  font-style: normal;
+  color: #6f635b !important;
+  font-size: 1rem !important;
+}
+.pika-button:hover {
+  color: #264e36 !important;
+  font-weight: 500 !important;
+  background: #c0bfb2 !important;
+}
+.is-selected .pika-button {
+  background: #c0bfb2 !important;
+  color: #264e36 !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+}
+.calendar-form {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+.todo-container {
+  display: flex;
+  justify-content: space-between;
+  width: 516px;
+}
+.todo-small-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 70%;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.time-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.input-todo {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.label-todo,
+.label-time {
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  color: #771011;
+}
+
+.input-time {
+  min-width: none !important;
+  width: 130px !important;
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #6f635b;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+}
+
+.choices__list--dropdown {
+  top: -100% !important;
+  left: 110% !important;
+  border-radius: 10px !important;
+  max-height: 200px !important;
+  color: #6f635b !important;
+}
+
+.btn-add {
+  display: flex;
+  align-self: center;
+  height: 40px;
+  width: 120px;
+  border: none;
+  border-radius: 20px;
+}
+.btn-add:hover {
+  cursor: pointer;
+  transform: translate(3px, 7px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.header-date {
+  margin-top: 3vh;
+  margin-left: 7vh;
+  justify-content: left;
+  font-size: 5vh;
+}
+.choices {
+  width: 130px;
+}
+.choices__inner {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  min-height: unset !important;
+  box-sizing: border-box !important;
+  border-radius: 20px !important;
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem !important;
+  color: #6f635b;
+  border: none !important;
+  background-color: white !important;
+}
+.choices[data-type*="select-one"]::after {
+  right: 0px;
+  border-color: #6f635b transparent transparent !important;
+}
+
+.choices__item {
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem !important;
+}
+.label-time {
+  margin-right: 20px;
+}
+
+.category-icon {
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+}
+
+#container-plans {
+  display: flex;
+}
+#form {
+  flex-direction: column;
+}
+.todos {
+  flex-basis: 50%;
+}
+.todo-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  overflow-y: auto;
+  margin-bottom: 30px;
+}
+
+#progress {
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #771011;
+}
+
+.todo-list::-webkit-scrollbar {
+  width: 14px; /* Width of the scrollbar */
+}
+
+.todo-list::-webkit-scrollbar-track {
+  background: white; /* Track color */
+  border-radius: 10px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+  background-color: #6f635b; /* Scrollbar color */
+  border-radius: 10px; /* Round the edges of the scrollbar */
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem !important;
+  color: #221712;
+}
+
+.todo-item::before {
+  content: "Editing...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 23, 18, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  align-items: center;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.todo-item.editing::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.todo-item span {
+  margin-right: 20px;
+}
+.buttons {
+  margin-right: 10px;
+}
+
+.todoText {
+  display: block;
+  max-width: 300px;
+  overflow-x: hidden;
+}
+
+.btn-edit,
+.btn-remove,
+.btn-ready {
+  width: 34px;
+  height: 34px;
+  padding: 4px;
+  margin-right: 8px;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+}
+.btn-edit:hover,
+.btn-remove:hover,
+.btn-ready:hover {
+  cursor: pointer;
+  background-color: #c0bfb2;
+  border-radius: 10px;
+}
+.btn-edit {
+  background-image: url("./pictures/pencil.png");
+}
+.btn-remove {
+  background-image: url("./pictures/cross.png");
+}
+.btn-ready {
+  background-image: url("./pictures/check.png");
+}
+
+.footer-greet {
+  position: absolute;
+  bottom: 0;
+  background-image: url("./pictures/tomato2.png");
+  background-repeat: repeat;
+  background-size: 40px 40px;
+  height: 25px;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 3vh;
+  }
+
+  .pic-monster {
+    width: 100px;
+  }
+  .btn-remember {
+    top: 12%;
+  }
+  .pika-lendar {
+    width: 400px !important;
+  }
+  .pika-label {
+    font-size: 2.5vh !important;
+  }
+}
+@media (max-width: 680px) {
+  h1 {
+    font-size: 2vh;
+  }
+  h3 {
+    font-size: 3vh;
+  }
+  .input-todo {
+    width: 90%;
+  }
+  .input-name {
+    position: unset;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-remember {
+    position: unset;
+    margin-top: 5%;
+    width: 30%;
+  }
+}
