@@ -167,6 +167,10 @@ function displayForm(date) {
       hoverCircleColor: "rgb(38,78,54,0.7)",
       selectorColor: "rgb(38,78,54,0.7)",
     },
+    fonts: {
+      clockInnerCircleFontSize: 14,
+      clockOuterCircleFontSize: 16,
+    },
   }),
     displayTodos(date);
   const selectElement = document.getElementById("categories");

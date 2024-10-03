@@ -264,11 +264,14 @@ abbr[title] {
 }
 
 .choices__list--dropdown {
-  top: -100% !important;
-  left: 110% !important;
+  top: -87px !important;
+  left: 160px !important;
   border-radius: 10px !important;
-  max-height: 200px !important;
   color: #6f635b !important;
+}
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+  padding: 6px !important;
 }
 
 .btn-add {
