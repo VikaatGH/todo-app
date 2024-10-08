@@ -98,7 +98,11 @@ function displayCalendar() {
       selectedDate.setHours(0, 0, 0, 0);
 
       if (selectedDate >= currentDate) displayForm(date);
-      else displayTodos(date);
+      else {
+        displayTodos(date);
+        document.getElementById("todo-small-container").style.display = "none";
+        document.getElementById("btn-add").style.display = "none";
+      }
     },
   });
   field.parentNode.insertBefore(picker.el, field.nextSibling);
@@ -133,7 +137,7 @@ function showDate(date) {
 
 function displayForm(date) {
   let todoContainer = document.getElementById("todo-container");
-  todoContainer.innerHTML = `<div class="todo-small-container"><input type="text" placeholder="Add a new todo" class="input-todo" id="input-todo">
+  todoContainer.innerHTML = `<div class="todo-small-container" id="todo-small-container"><input type="text" placeholder="Add a new todo" class="input-todo" id="input-todo">
   <div class="select-container">
   <label for="categories" class="label-todo">Choose a category:</label>
   <select name="categories" class="select-category" id="categories">
