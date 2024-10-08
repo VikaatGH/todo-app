@@ -250,8 +250,9 @@ abbr[title] {
 }
 
 .input-time {
-  min-width: none !important;
+  min-width: unset !important;
   width: 130px !important;
+  box-sizing: border-box;
   font-family: "Finger Paint", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -261,6 +262,7 @@ abbr[title] {
   border-radius: 20px;
   border: none;
   background-color: white;
+  outline: none;
 }
 
 .choices__list--dropdown {
@@ -348,6 +350,16 @@ abbr[title] {
   height: 500px;
   overflow-y: auto;
   margin-bottom: 30px;
+}
+
+@supports (-webkit-appearance: none) {
+  .todo-list {
+    height: 450px;
+  }
+  .choices__list--dropdown {
+    top: -180px !important;
+    left: 300px !important;
+  }
 }
 
 #progress {

@@ -151,7 +151,7 @@ function displayForm(date) {
   </select>
   </div>
   <div class="time-container">
-  <label for="input-time" class="label-time">Choose time:</label>
+  <label for="timepicker" class="label-time">Choose time:</label>
   <input type="text" class="input-time" id="timepicker">
   </div>
   </div>
